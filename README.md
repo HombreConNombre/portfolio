@@ -21,5 +21,15 @@ Some of the technologies used in this project:
 - Git & GitHub API
 - Responsive Design
 
-## 📂 Project Structure
+## 🚀 Running Locally
+
+Clone the repository and start the Flask app:
+
+```bash
+git clone https://github.com/HombreConNombre/portfolio.git
+cd portfolio
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+flask run
 
