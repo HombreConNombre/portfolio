@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>My portfolio</h1>
+        <!-- Menú de navegación -->
+    </header>
+    
+    <main>
+        {% block content %}
+        <!-- Contenido de cada página -->
+        {% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Iñigo M.</p>
+        <a href="https://www.linkedin.com/in/iñigo-martinez-menendez-37972a125" target="_blank" class="linkedin-link">
+            <img src="{{ url_for('static', filename='images/LinkedIn.png') }}" alt="LinkedIn">
+        </a>
+    </footer>
+</body>
+</html>

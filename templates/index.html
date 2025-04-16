@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio - Mi Portfolio{% endblock %}
+
+{% block content %}
+<section class="intro">
+    <h2>Welcome to my portfolio</h2>
+    <p id="intro-text">Hi, I'm a passionate and versatile software developer with a strong focus on backend technologies. I enjoy building reliable, scalable, and efficient systems, always striving to write clean and maintainable code. 
+        My background includes experience with Python, Flask, Django, and C++, as well as a deep interest in Linux and open source development.
+        I'm constantly learning and exploring new tools and frameworks, and I'm currently focused on improving my skills in full-stack development and cloud-based architectures. I believe in the power of collaboration, continuous improvement, 
+        and developing solutions that create meaningful impact.  
+        Outside of coding, I enjoy exploring nature with my dog, learning new languages, and tackling challenging puzzles.
+        </p>
+</section>
+<section id="technologies">
+    <h2>Technologies I use</h2>
+    <div class="tech-container">
+        {% for tech in technologies %}
+            <div class="tech-card">
+                <img class="logo" src="{{ url_for('static', filename=tech.icon) }}" alt="{{ tech.name }} logo">
+                <p>{{ tech.name }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+<section id="projects">
+    <h2>Latest GitHub Repositories</h2>
+    <div class="projects-container">
+      {% for repo in repos %}
+        <div class="project-card">
+          <h3><a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a></h3>
+          <p>{{ repo.description or "No description provided." }}</p>
+        </div>
+      {% endfor %}
+    </div>
+</section>
+
+<!-- Más secciones, como proyectos, habilidades, etc. -->
+{% endblock %}
