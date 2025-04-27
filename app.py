@@ -16,7 +16,8 @@ def index():
         {"name": "JS", "icon": "images/js.png"},
         {"name": "Java", "icon": "images/Java.svg"},
         {"name": "Spring", "icon": "images/spring.png"},
-        {"name": "C++", "icon": "images/CPP.png"}
+        {"name": "C++", "icon": "images/CPP.png"},
+        {"name": "Rust", "icon": "images/rust.png"}
     ]
     return render_template(
         "index.html", 
